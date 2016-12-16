@@ -14,7 +14,7 @@ def makeRow(PRN):
 
     soup = BeautifulSoup(f)
     all_textEmptyLines = ''.join(soup.findAll(text=True))
-    all_text = text = "\n".join([ll.rstrip() for ll in all_textEmptyLines.splitlines() if ll.strip()])
+    all_text = "\n".join([ll.rstrip() for ll in all_textEmptyLines.splitlines() if ll.strip()])
     accountNameIndex = all_text.find("Account Name")
     accountNameAndTheRest = all_text[accountNameIndex:]
     accountName = accountNameAndTheRest.splitlines()[1].strip().replace("&amp","&")

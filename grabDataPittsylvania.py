@@ -28,7 +28,7 @@ def makeRow(PRN):
         f = opener.open("http://caplus.myossi.com/gscwebp/search.aspx?&skey=pin&svalue=" + PRN + "&canht=307&canwd=866&boundne=37.020740681886586,-78.82536499023439&boundsw=36.683382714144166,-80.01463500976564")
         soup = BeautifulSoup(f)
         all_textEmptyLines = ''.join(soup.findAll(text=True))
-        all_text = text = "\n".join([ll.rstrip() for ll in all_textEmptyLines.splitlines() if ll.strip()])
+        all_text = "\n".join([ll.rstrip() for ll in all_textEmptyLines.splitlines() if ll.strip()])
         accountNameIndex = all_text.find("NAME")
         accountNameAndTheRest = all_text[accountNameIndex:]
         accountName = accountNameAndTheRest.splitlines()[1].strip().replace("&amp","&")
