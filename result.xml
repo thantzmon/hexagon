@@ -1,0 +1,542 @@
+<lines>
+  <line width="2" color="#FF0000">
+    <point lng="-79.38905" lat="36.8866" />
+    <point lng="-79.38899" lat="36.88682" />
+    <point lng="-79.38893" lat="36.88711" />
+    <point lng="-79.38779" lat="36.88695" />
+    <point lng="-79.38785" lat="36.8867" />
+    <point lng="-79.38792" lat="36.88648" />
+    <point lng="-79.38818" lat="36.88654" />
+    <point lng="-79.38905" lat="36.8866" />
+  </line>
+  <line width="2" color="#FF0000">
+    <point lng="-79.3922" lat="36.87594" />
+    <point lng="-79.3917" lat="36.87665" />
+    <point lng="-79.39108" lat="36.87804" />
+    <point lng="-79.3932" lat="36.87882" />
+    <point lng="-79.39501" lat="36.87817" />
+    <point lng="-79.39502" lat="36.87812" />
+    <point lng="-79.39524" lat="36.87842" />
+    <point lng="-79.39549" lat="36.87864" />
+    <point lng="-79.39575" lat="36.87877" />
+    <point lng="-79.39605" lat="36.87908" />
+    <point lng="-79.39635" lat="36.87931" />
+    <point lng="-79.39511" lat="36.88059" />
+    <point lng="-79.39474" lat="36.88107" />
+    <point lng="-79.39416" lat="36.88108" />
+    <point lng="-79.39391" lat="36.88102" />
+    <point lng="-79.39367" lat="36.88095" />
+    <point lng="-79.39328" lat="36.88073" />
+    <point lng="-79.39318" lat="36.88079" />
+    <point lng="-79.39391" lat="36.88123" />
+    <point lng="-79.39416" lat="36.88157" />
+    <point lng="-79.39428" lat="36.8818" />
+    <point lng="-79.39424" lat="36.88209" />
+    <point lng="-79.39411" lat="36.88235" />
+    <point lng="-79.39329" lat="36.88379" />
+    <point lng="-79.39221" lat="36.88602" />
+    <point lng="-79.39226" lat="36.88604" />
+    <point lng="-79.39198" lat="36.88657" />
+    <point lng="-79.39134" lat="36.88638" />
+    <point lng="-79.39069" lat="36.88615" />
+    <point lng="-79.39053" lat="36.88654" />
+    <point lng="-79.39012" lat="36.88646" />
+    <point lng="-79.38824" lat="36.88632" />
+    <point lng="-79.38805" lat="36.88628" />
+    <point lng="-79.3884" lat="36.88521" />
+    <point lng="-79.38713" lat="36.88504" />
+    <point lng="-79.38689" lat="36.88465" />
+    <point lng="-79.38665" lat="36.88418" />
+    <point lng="-79.38629" lat="36.8836" />
+    <point lng="-79.38608" lat="36.88327" />
+    <point lng="-79.38553" lat="36.88259" />
+    <point lng="-79.3847" lat="36.8818" />
+    <point lng="-79.38396" lat="36.88129" />
+    <point lng="-79.38334" lat="36.88096" />
+    <point lng="-79.38241" lat="36.88051" />
+    <point lng="-79.38117" lat="36.88003" />
+    <point lng="-79.38051" lat="36.87983" />
+    <point lng="-79.38007" lat="36.87973" />
+    <point lng="-79.37963" lat="36.87962" />
+    <point lng="-79.37936" lat="36.87954" />
+    <point lng="-79.37899" lat="36.87939" />
+    <point lng="-79.37861" lat="36.87923" />
+    <point lng="-79.37841" lat="36.87913" />
+    <point lng="-79.37813" lat="36.87897" />
+    <point lng="-79.37768" lat="36.87876" />
+    <point lng="-79.37729" lat="36.87862" />
+    <point lng="-79.37691" lat="36.87851" />
+    <point lng="-79.37937" lat="36.87543" />
+    <point lng="-79.3801" lat="36.87407" />
+    <point lng="-79.38601" lat="36.87054" />
+    <point lng="-79.38612" lat="36.87001" />
+    <point lng="-79.38801" lat="36.87004" />
+    <point lng="-79.38939" lat="36.87013" />
+    <point lng="-79.38966" lat="36.87019" />
+    <point lng="-79.39015" lat="36.87054" />
+    <point lng="-79.39024" lat="36.87068" />
+    <point lng="-79.39188" lat="36.87399" />
+    <point lng="-79.39226" lat="36.87503" />
+    <point lng="-79.39226" lat="36.87558" />
+    <point lng="-79.39225" lat="36.87562" />
+    <point lng="-79.3922" lat="36.87594" />
+  </line>
+  <bbounds minlng="-79.39623" minlat="36.86993" maxlng="-79.37701" maxlat="36.8872" />
+  <attributes>
+    <data>
+      <name>SHP_YMAX</name>
+      <content>3483681.7500</content>
+    </data>
+    <data>
+      <name>UNIQUEID</name>
+      <content>17013.0000</content>
+    </data>
+    <data>
+      <name>CALC_AREA</name>
+      <content>405.1600</content>
+    </data>
+    <data>
+      <name>COLOR_2</name>
+      <content>181.0000</content>
+    </data>
+    <data>
+      <name>ALPHA</name>
+      <content>2428-30-3329  </content>
+    </data>
+    <data>
+      <name>PAD2</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>PAD3</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>OID_</name>
+      <content>33014.0000</content>
+    </data>
+    <data>
+      <name>JOIN_GPIN</name>
+      <content>2428-30-3329</content>
+    </data>
+    <data>
+      <name>JOIN_ACCOU</name>
+      <content>07200-0A-00-0058-0  </content>
+    </data>
+    <data>
+      <name>NAME</name>
+      <content>ADAMS, ROBERT T JR ET ALS                                                  </content>
+    </data>
+    <data>
+      <name>PC_TOWNSHI</name>
+      <content>5.0000</content>
+    </data>
+    <data>
+      <name>PC_ASSESSE</name>
+      <content>3999000.0000</content>
+    </data>
+    <data>
+      <name>CARD_NO</name>
+      <content>1.0000</content>
+    </data>
+    <data>
+      <name>NO_PARCEL_</name>
+      <content>2.0000</content>
+    </data>
+    <data>
+      <name>NAME_2</name>
+      <content>GRAVELY, LOIS A ET ALS                                                     </content>
+    </data>
+    <data>
+      <name>DEED_DATE</name>
+      <content>3/7/2011 12:00:00 AM</content>
+    </data>
+    <data>
+      <name>PC_CLASS_C</name>
+      <content>6.0000</content>
+    </data>
+    <data>
+      <name>TOTAL_ACRE</name>
+      <content>399.9000</content>
+    </data>
+    <data>
+      <name>PC_PROPERT</name>
+      <content>HWY 649 DB162-28 WB18-244                                                                                                    </content>
+    </data>
+    <data>
+      <name>ADDRESS</name>
+      <content>C/O ROBERT T ADAMS JR                                                      </content>
+    </data>
+    <data>
+      <name>PC_CURR_OW</name>
+      <content>WF11/00193               </content>
+    </data>
+    <data>
+      <name>PC_ZONE_CO</name>
+      <content>A-1                      </content>
+    </data>
+    <data>
+      <name>ADDRESS_2</name>
+      <content>1536 PAYNETON RD                                                           </content>
+    </data>
+    <data>
+      <name>PC_MAP_SHE</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>NBRHD_DESC</name>
+      <content>100 0%                   </content>
+    </data>
+    <data>
+      <name>PC_LANDSCA</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>UTILITIES</name>
+      <content>WELL;SEPTIC                                                                </content>
+    </data>
+    <data>
+      <name>ACCOUNT_CS</name>
+      <content>CHATHAM, VA 24531                                                          </content>
+    </data>
+    <data>
+      <name>SALE_PRICE</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>ROAD_DESC</name>
+      <content>01 PAVED                                          </content>
+    </data>
+    <data>
+      <name>TOPOGRAPHI</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>BLDG_NO</name>
+      <content>8.0000</content>
+    </data>
+    <data>
+      <name>BLDG_VALUA</name>
+      <content>R                        </content>
+    </data>
+    <data>
+      <name>USE_DESC</name>
+      <content>0101 SINGLE FAM                                   </content>
+    </data>
+    <data>
+      <name>MA_BLDG_AR</name>
+      <content>3360.0000</content>
+    </data>
+    <data>
+      <name>BLDG_CLASS</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>FUEL_DESC</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>HEAT_DESC</name>
+      <content>STOVE                                             </content>
+    </data>
+    <data>
+      <name>MA_HEAT</name>
+      <content>3360.0000</content>
+    </data>
+    <data>
+      <name>BLDG_YR_BU</name>
+      <content>1900.0000</content>
+    </data>
+    <data>
+      <name>AIR_DESC</name>
+      <content>NO CENTRAL AIR                                    </content>
+    </data>
+    <data>
+      <name>MA_AC</name>
+      <content>3360.0000</content>
+    </data>
+    <data>
+      <name>BLDG_EFF_Y</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>MA_BATHS</name>
+      <content>1.0000</content>
+    </data>
+    <data>
+      <name>COND_DESC</name>
+      <content>05 POOR                  </content>
+    </data>
+    <data>
+      <name>MA_ATTIC_U</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>STYLE_DESC</name>
+      <content>05 TWO STORY             </content>
+    </data>
+    <data>
+      <name>MA_ATTIC_F</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>SECT_NBR_S</name>
+      <content>2.0000</content>
+    </data>
+    <data>
+      <name>FIRE_DESC</name>
+      <content>299.0000</content>
+    </data>
+    <data>
+      <name>MA_FIREPLA</name>
+      <content>2.0000</content>
+    </data>
+    <data>
+      <name>FOUND_DESC</name>
+      <content>01 CINDER BLOCK                                   </content>
+    </data>
+    <data>
+      <name>STRUCT_DES</name>
+      <content>01 WOOD                  </content>
+    </data>
+    <data>
+      <name>EXTWALL_DE</name>
+      <content>WOOD SIDING                                       </content>
+    </data>
+    <data>
+      <name>ROOF_DESC</name>
+      <content>02 METAL                                          </content>
+    </data>
+    <data>
+      <name>SECT_BASEM</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>SECT_B_PCT</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>SECT_ATTIC</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>SECT_A_PCT</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>SECT_NBR_R</name>
+      <content>6.0000</content>
+    </data>
+    <data>
+      <name>SECT_NBR_B</name>
+      <content>2.0000</content>
+    </data>
+    <data>
+      <name>SECT_FULL_</name>
+      <content>1.0000</content>
+    </data>
+    <data>
+      <name>SECT_HALF_</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>SECT_FIREP</name>
+      <content>1.0000</content>
+    </data>
+    <data>
+      <name>SECT_CHIMN</name>
+      <content>2.0000</content>
+    </data>
+    <data>
+      <name>FLOOR_DESC</name>
+      <content>PINE                                              </content>
+    </data>
+    <data>
+      <name>INT_DESC</name>
+      <content>01 PLASTER                                        </content>
+    </data>
+    <data>
+      <name>BLDG_DESCR</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>BUILDING_S</name>
+      <content>212879.0000</content>
+    </data>
+    <data>
+      <name>BLDG_REMAR</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>BUILDING_G</name>
+      <content>C+5                      </content>
+    </data>
+    <data>
+      <name>BLDG_G_AMT</name>
+      <content>1.0500</content>
+    </data>
+    <data>
+      <name>BUILDING_R</name>
+      <content>223523.0000</content>
+    </data>
+    <data>
+      <name>PHYSICAL_P</name>
+      <content>-90.0000</content>
+    </data>
+    <data>
+      <name>BUILDING_P</name>
+      <content>-201171.0000</content>
+    </data>
+    <data>
+      <name>GENERAL_RE</name>
+      <content>649                                                                                                                                                                                                                                                           </content>
+    </data>
+    <data>
+      <name>FUNCTIONAL</name>
+      <content>104                      </content>
+    </data>
+    <data>
+      <name>FUNCT_PCT</name>
+      <content>-20.0000</content>
+    </data>
+    <data>
+      <name>BUILDING_F</name>
+      <content>-4470.0000</content>
+    </data>
+    <data>
+      <name>ECONOMIC_C</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>ECONOMIC_P</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>BUILDING_E</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>PCT_COMPLE</name>
+      <content>100.0000</content>
+    </data>
+    <data>
+      <name>PCT_NOT_CO</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>BLDG_PCT_C</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>BUILDING_N</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>BLDG_N_AMT</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>ACTIVE_BLD</name>
+      <content>17900.0000</content>
+    </data>
+    <data>
+      <name>PC_LAST_AP</name>
+      <content>RG                       </content>
+    </data>
+    <data>
+      <name>PC_DATE_LA</name>
+      <content>11/21/2013 12:00:00 AM</content>
+    </data>
+    <data>
+      <name>PC_SOURCE_</name>
+      <content>O]O]O                    </content>
+    </data>
+    <data>
+      <name>PC_CENSUS_</name>
+      <content>18991230                 </content>
+    </data>
+    <data>
+      <name>TOTAL_LAND</name>
+      <content>707000.0000</content>
+    </data>
+    <data>
+      <name>TOTAL_BLDG</name>
+      <content>22000.0000</content>
+    </data>
+    <data>
+      <name>TOTAL_MKT_</name>
+      <content>729000.0000</content>
+    </data>
+    <data>
+      <name>TOTAL_USE_</name>
+      <content>514300.0000</content>
+    </data>
+    <data>
+      <name>TOTAL_NET_</name>
+      <content>214700.0000</content>
+    </data>
+    <data>
+      <name>OLD_LAND_V</name>
+      <content>707000.0000</content>
+    </data>
+    <data>
+      <name>OLD_BLDG_V</name>
+      <content>22000.0000</content>
+    </data>
+    <data>
+      <name>OLD_USE_DE</name>
+      <content>514300.0000</content>
+    </data>
+    <data>
+      <name>OLD_NET_VA</name>
+      <content>214700.0000</content>
+    </data>
+    <data>
+      <name>TOTAL_IMPR</name>
+      <content>4100.0000</content>
+    </data>
+    <data>
+      <name>BLDG_NO_2</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>SITE_ADD_1</name>
+      <content>1097 PAYNETON RD                                                           </content>
+    </data>
+    <data>
+      <name>SITE_ADD_2</name>
+      <content>
+      </content>
+    </data>
+    <data>
+      <name>SITE_ADD_3</name>
+      <content>CHATHAM, VA 24531                                                          </content>
+    </data>
+    <data>
+      <name>COLOR</name>
+      <content>15.0000</content>
+    </data>
+    <data>
+      <name>FILLTYPE</name>
+      <content>0.0000</content>
+    </data>
+    <data>
+      <name>RECNUM</name>
+      <content>15563.0000</content>
+    </data>
+  </attributes>
+</lines>

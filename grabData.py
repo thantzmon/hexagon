@@ -1,4 +1,5 @@
 import urllib2
+from urllib2 import HTTPError
 import json
 import BeautifulSoup
 import HTMLParser
@@ -20,33 +21,31 @@ def makeRow(PRN):
         ' That is the cookie for the website. Put it as the second parameter of the function above.
         '''
 
-        f = opener.open("http://auditor.co.ross.oh.us/Data.aspx?ParcelID=" + PRN)
+        #site address = SITE_ADD_1
+        #owner = name
+        #mail address = address2 
+        #city state zip = SITE_ADD_3
+        f = opener.open("http://caplus.myossi.com/gscwebp/search.aspx?&skey=pin&svalue=" + PRN + "&canht=307&canwd=866&boundne=37.020740681886586,-78.82536499023439&boundsw=36.683382714144166,-80.01463500976564")
         soup = BeautifulSoup(f)
         all_textEmptyLines = ''.join(soup.findAll(text=True))
         all_text = text = "\n".join([ll.rstrip() for ll in all_textEmptyLines.splitlines() if ll.strip()])
-        accountNameIndex = all_text.find("Owner:")
+        accountNameIndex = all_text.find("NAME")
         accountNameAndTheRest = all_text[accountNameIndex:]
-        accountName = accountNameAndTheRest.splitlines()[1].strip().replace("&amp","&").replace("&nbsp;","")
+        accountName = accountNameAndTheRest.splitlines()[1].strip().replace("&amp","&")
 
-        firstAddressIndex = all_text.find("Address:")
-        firstAddressAndTheRest = all_text[firstAddressIndex:]
-        firstAddress = firstAddressAndTheRest.splitlines()[1].strip()
+        address1Index = all_text.find("ADDRESS")
+        address1AndTheRest = all_text[address1Index:]
+        address1 = address1AndTheRest.splitlines()[1].strip()
 
-        afterFirstAddressIndex = firstAddressAndTheRest[firstAddressAndTheRest.find(firstAddress):]
-        address1Index = afterFirstAddressIndex.find("Address:")
-        address1AndTheRest = afterFirstAddressIndex[address1Index:]
-        address1 = address1AndTheRest.splitlines()[1].strip().replace("&nbsp;","")
-
-        address2Index = all_text.find("City State Zip:")
+        address2Index = all_text.find("ACCOUNT_CS")
         address2AndTheRest = all_text[address2Index:]
-        address2 = address2AndTheRest.splitlines()[1].strip().replace("&nbsp;","")
+        address2 = address2AndTheRest.splitlines()[1].strip().replace("COLOR", "")
 
         comboAddress = address1 + ", " + address2
 
-        afterSecondAddressIndex = address1AndTheRest[address1AndTheRest.find(address1):]
-        siteAddressIndex = afterSecondAddressIndex.find("Address:")
-        siteAddressAndTheRest = afterSecondAddressIndex[siteAddressIndex:]
-        siteAddress = siteAddressAndTheRest.splitlines()[1].strip().replace("No data to display","").replace("&nbsp;","")
+        siteAddressIndex = all_text.find("SITE_ADD_1")
+        siteAddressAndTheRest = all_text[siteAddressIndex:]
+        siteAddress = siteAddressAndTheRest.splitlines()[1].strip().replace("No data to display","").replace("SITE_ADD_2", "")
         '''
         zoningIndex = all_text.find("Zoning")
         zoningAndTheRest = all_text[zoningIndex:]
@@ -63,14 +62,13 @@ def makeRow(PRN):
         
         myList = [PRN,address1,address2,comboAddress,siteAddress,accountName]
         return(myList)
-    except IndexError:
+    except (IndexError, urllib2.HTTPError) as e:
         print(PRN + " is not on this website.")
         return([PRN,"","","","",""])
 
 script, filename = argv
-txt = open(filename)
-PRNs = txt.read().split('\n')[1:]
-
+txt = open(filename).read()
+PRNs = txt.split('\n')[1:]
 filename = 'test.csv'
 with open(filename, 'wb') as myFile:
     myList = ["PRN", "Address_1", "Address_2", "comboaddress", "SiteAddress", "Owner"]
