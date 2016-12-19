@@ -8,6 +8,14 @@ import csv
 from sys import argv
 import re
 
+'''
+This is just the file from the most recent county. I try to allow this to be the file that can be broken at times, and 
+I use all the other files as examples of working code. Try to use this when extending to other counties and then when 
+you get it to work, copy the working file to grabData[CountyName].py. All the code below will be explained in other files. 
+This is just a playground.
+'''
+
+
 def searchString(string, phrase):
     counter = 0
     for line in string:

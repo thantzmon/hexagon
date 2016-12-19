@@ -11,45 +11,37 @@ import re
 
 
 def makeRow(PRN):
+    #in the case of an error, this will make the program not crash, therefore this chunk of code only runs when no error happens
     try:
+        #an opener is an object that opens files. This is needed so that you can transfer information (like the cookie) when opening the file
         opener = urllib2.build_opener()
+        #look at documentation for acquiring the cookie to learn how I got this
         opener.addheaders.append(('Cookie', 'ASP.NET_SessionId=zvxa1oyqwvewvwisn11s1lxf; _ga=GA1.2.1653561520.1481905536; _gat=1'))
-        '''
-        ' RETREIVING COOKIE: (note: this is how to do it on Firefox. Chrome, Safari, or others probably have a similar yet different process to do this)
-        ' To get your cookie, open the network tab of inspect element and press reload if you have to
-        ' Then press the "Accept" or "I agree" or whatever button brings you to the next page
-        ' The first value on the spreadsheet should be a POST method from disclaimer 
-        ' Under the "Headers" tab you should be able to find a box that says "Cookie" with its correcsponding value
-        ' That is the cookie for the website. Put it as the second parameter of the function above.
-        '''
-
-        #site address = SITE_ADD_1
-        #owner = name
-        #mail address = address2 
-        #city state zip = SITE_ADD_3
-        
+        #open website (+PRN allows the website to be different for every parcel id). f.read() returns the html of the page. I copy the 
+        #html to result.html in the hexagon directory to figure out what page the program returned
         f = opener.open('https://beacon.schneidercorp.com/Application.aspx?AppID=104&LayerID=1435&PageTypeID=4&PageID=805&Q=633415402&KeyValue=' + PRN)
-        
-        #no need to update uselessPart. It is the same regardless of the GPIN (parcel ID)
+        #BeautifulSoup removes all html elements, leaving just the text
         soup = BeautifulSoup(f)
+        #because BeautifulSoup returns a list of lines, this line makes it into one big string
         all_textEmptyLines = ''.join(soup.findAll(text=True))
+        #removes all empty lines
         all_text = "\n".join([ll.rstrip() for ll in all_textEmptyLines.splitlines() if ll.strip()])
-        
+
+        #find the index where the phrase "Primary Owner" followed by a new line is in all_text. The line under it should be the actual 
+        #account name.
         accountNameIndex = all_text.find("Primary Owner\n")
+        #using the index of the phrase "Primary owner", removes everything before it in order to make the first line "Owners"
+        #and the second line the account name. This allows us to know what line number the information we want is on.
         accountNameAndTheRest = all_text[accountNameIndex:]
+        #makes the string a list of lines, takes the second line, removes all white space, and in the situations where there was an 
+        #"&" in the account name, it changes the strange return value of it to a normal &.
         accountName = accountNameAndTheRest.splitlines()[1].strip().replace("&amp","&")
         
-        
+        #the next lines do the same thing except with their respective fields
         address1Index = all_text.find("Primary Owner\n")
         address1AndTheRest = all_text[address1Index:]
         address1 = address1AndTheRest.splitlines()[2].strip()
-        '''
-        address2Index = all_text.find("City_State_ZIP_Current")
-        address2AndTheRest = all_text[address2Index:]
-        address2 = address2AndTheRest.splitlines()[1].strip().replace("COLOR", ""))[0]
-        
-        address1 = ""
-        '''
+
         address2 = ""
 
         comboAddress = address1 + ", " + address2
@@ -58,38 +50,42 @@ def makeRow(PRN):
         siteAddressAndTheRest = all_text[siteAddressIndex:]
         siteAddress = siteAddressAndTheRest.splitlines()[1].strip().replace("No data to display","").replace("Township", "")
 
-        '''
-        zoningIndex = all_text.find("Zoning")
-        zoningAndTheRest = all_text[zoningIndex:]
-        zoning = zoningAndTheRest.splitlines()[1].strip()
-        
-        
-        print(PRN)
-        print(address1)
-        print(address2)
-        print(comboAddress)
-        print(siteAddress)
-        #print(zoning)
-        print(accountName)
-        '''
+        #puts all the values into a list
         myList = [PRN,address1,address2,comboAddress,siteAddress,accountName]
+        #confirms the function ended succesfully
         print("success")
+        #makes that list the return value of the function
         return(myList)
+    #if the program ended with an error (the parcel number is not on the website) it fails without breaking the program
     except IndexError:
+        #prints which parcel number failed
         print(PRN + " did not work")
+        #returns an empty row to write to the csv
         return [PRN, "","","","",""]
     
-
+#when you run the program you say "python grabDataMorrison.py PRNs.txt". This sets script = grabDataMorrison.py and 
+#filename = PRNs.txt.
 script, filename = argv
+#opens the list of parcel numbers
 txt = open(filename).read()
+#makes a list of parcel numbers out of the file inputted. Each line is a parcel and THE FIRST LINE IS IGNORED
 PRNs = txt.split('\n')[1:]
-filename = 'test.csv'
-with open(filename, 'wb') as myFile:
-    myList = ["PRN", "Address_1", "Address_2", "comboaddress", "SiteAddress", "Owner"]
-    wr = csv.writer(myFile, quoting=csv.QUOTE_ALL)
-    wr.writerow(myList)
-    for PRN in PRNs:
-        if PRN != "":
-            row = makeRow(PRN)
-            wr.writerow(row)
 
+#sets the file to write to as "Morrison County.csv"
+filename = 'Morrison County.csv'
+#opens the file in order to write in it
+with open(filename, 'wb') as myFile:
+    #makes a list of headers
+    myList = ["PRN", "Address_1", "Address_2", "comboaddress", "SiteAddress", "Owner"]
+    #makes a writer object
+    wr = csv.writer(myFile, quoting=csv.QUOTE_ALL)
+    #write the headers
+    wr.writerow(myList)
+    #loop through every parcel number from the file and runs the makeRow function
+    for PRN in PRNs:
+        #only makes a new row is the PRN variable has a value in it 
+        if PRN != "":
+            #sets row variable to be the return value of makeRow
+            row = makeRow(PRN)
+            #writes the row to the next line of the csv
+            wr.writerow(row)
