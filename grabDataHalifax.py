@@ -83,16 +83,16 @@ def makeRow(PRN):
     #makes that list the return value of the function
     return(myList)
     
-#when you run the program you say "python grabDataHalifax.py PRNs.txt". This sets script = grabDataHalifax.py and 
-#filename = PRNs.txt.
-script, filename = argv
+#when you run the program you say "python grabDataHalifax.py PRNs.txt HalifaxCounty.csv". This sets script = grabDataHalifax.py 
+#filename = PRNs.txt. and output = HalifaxCounty.csv
+script, filename, output = argv
 #opens the list of parcel numbers
 txt = open(filename).read()
 #makes a list of parcel numbers out of the file inputted. Each line is a parcel and THE FIRST LINE IS IGNORED
 PRNs = txt.split('\n')[1:]
 
-#sets the file to write to as "Halifax County.csv"
-filename = 'Halifax County.csv'
+#sets the file to write to as the output file
+filename = output
 #opens the file in order to write in it
 with open(filename, 'wb') as myFile:
     #makes a list of headers

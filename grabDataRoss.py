@@ -80,16 +80,16 @@ def makeRow(PRN):
         #returns an empty row to write to the csv
         return([PRN,"","","","",""])
 
-#when you run the program you say "python grabDataRoss.py PRNs.txt". This sets script = grabDataRoss.py and 
-#filename = PRNs.txt.
-script, filename = argv
+#when you run the program you say "python grabDataRoss.py PRNs.txt RossCounty.csv". This sets script = grabDataRoss.py 
+#filename = PRNs.txt. and output = RossCounty.csv
+script, filename,output = argv
 #opens the list of parcel numbers
 txt = open(filename)
 #makes a list of parcel numbers out of the file inputted. Each line is a parcel and THE FIRST LINE IS IGNORED
 PRNs = txt.read().split('\n')[1:]
 
-#sets the file to write to as "Ross County.csv"
-filename = 'Ross County.csv'
+#sets the file to write to as the output file
+filename = output
 #opens the file in order to write in it
 with open(filename, 'wb') as myFile:
     #makes a list of headers
